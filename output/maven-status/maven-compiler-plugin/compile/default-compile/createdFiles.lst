@@ -1,0 +1,10 @@
+com\competition\service\AnimalsService.class
+com\competition\dao\AnimalsRepository.class
+com\competition\WebAppConfig.class
+com\competition\service\impl\AnimalsServiceImpl.class
+com\competition\model\Animals.class
+com\competition\controller\FindDogController.class
+com\competition\controller\ImgController.class
+com\competition\VersionApplication.class
+com\competition\App.class
+com\competition\service\impl\FileUtil.class

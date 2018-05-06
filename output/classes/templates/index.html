@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<link rel="stylesheet"  th:href="@{/css/test.css}">
+<img>
+<p th:text="'一共有'+${nums}+'个宠物亟待领取'"/>
+<!--<img id="image" th:src="${infoImg0}"/>
+
+<img id="image2" th:src="${infoImg1}" style="display:none"/>-->
+
+<div id="123" style="width: 200px;height: 300px;position:relative;">
+    <img id="image" style="width: 200px;height: 300px;" th:src="${infoImg1}"/>
+    <div style="width: 200px;height: 300px;position: absolute;z-index:2;top: 0; left: 0;">
+
+
+    </div>
+</div>
+<button style="width: 100px;height: 50px" name="456" id="btn">切换图片</button>
+</body>
+<script>
+    var num = 1;
+    document.getElementById("btn").onclick=function () {
+        if(num==1){
+            document.getElementById("image2").style.display="";
+            document.getElementById("image").style.display="none";
+            num = 0;
+        }
+        else{
+            document.getElementById("image").style.display="";
+            document.getElementById("image2").style.display="none";
+            num=1;
+        }
+        /*}else{
+            document.getElementById("image1").style.display="";
+            document.getElementById("image2").style.display="none"
+        }*/
+    }
+
+</script>
+</html>
