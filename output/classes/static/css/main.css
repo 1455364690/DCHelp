@@ -1,0 +1,220 @@
+@media screen and (min-width: 1120px) {
+    a{
+        text-decoration:none;
+        color: white;
+    }
+    body{
+        margin: 0;
+        /*min-width: 1120px;*/
+    }
+    div{
+        float: left;
+        margin: 0;
+        padding: 0;
+        /* text-align: center;
+         line-height: 50%;*/
+    }
+    #error{
+        display: none;
+        text-align: center;
+        font-size: 50px;
+    }
+    #top{
+        width: 100%;
+        background-color: rgba(255,225,255,1);
+
+    }
+    #content{
+        width: 100%;
+    }
+    #content_left{
+        /*height: 100%;*/
+        width: 10%;
+        height: 100%;
+        /*background-color: rgba(0,0,0,0.5);*/
+    }
+    #content_left p{
+        cursor:pointer;
+    }
+    .content_left_son{
+        width: 100%;
+        height: 10%;
+        background-color: #E0E0E0;
+        border-top: solid gray 1px;
+        border-bottom: solid gray 1px;
+        text-align: center;
+        vertical-align: center;
+        /*line-height: 200%;*/
+        /*text-align: center;*/
+    }
+
+    #content_left_son1_left{
+        width: 49%;
+        height: 100%;
+        border-right: solid gray 1px;
+    }
+    #content_left_son1_right{
+        width: 50%;
+        height: 100%;
+    }
+    #content_right{
+        width: 79.9%;
+        height: 100%;
+        /*background-color: rgba(0,0,0,0.5);*/
+    }
+    .content_right_son{
+        border: gray solid 1px;
+    }
+    #content_right_son1{
+        width: 100%;
+        height: 10%;
+    }
+    #content_right_son1_left{
+        height: 100%;
+        width: 20%;
+        text-align: center;
+    }
+    #content_right_son1_mid{
+        height: 100%;
+        width: 30%;
+        vertical-align:middle;
+    }
+    #content_right_son1_mid label{
+        width: 100%;
+        height: 100%;
+    }
+    #content_right_son1_mid select{
+        vertical-align:middle;
+        width: 80%;
+        margin-top: 20px;
+    }
+    #content_right_son1_right{
+        height: 100%;
+        width: 45%;
+
+    }
+    .buttons{
+        margin: 15px;
+        height: 50%;
+        width: 150px;
+        background-color: #7EC0EE;
+        text-align: center;
+        color: #FFFFFF;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    #content_right_son1_right p{
+        margin-top: 3px;
+        cursor:pointer;
+    }
+    #content_right_son2{
+        width: 100%;
+        height: 44%;
+    }
+    #content_right_son3{
+        width: 100%;
+        height: 45%;
+        /*padding-right:50px;*/
+    }
+    #content_right_right{
+        width: 10%;
+        height: 100%;
+    }
+    #bottem{
+        width: 100%;
+        /*height: 5%;*/
+        height: 30px;
+        /*bottom: 0;*/
+        /*position: fixed;*/
+        background-color: rgba(255,225,255,1);
+    }
+    #content_left_main{
+        margin-top: 120px;
+
+        width: 100%;
+        height: 100px;
+        cursor:pointer
+
+    }
+    #content_right_right_main{
+        margin-top: 120px;
+        width: 100%;
+        height: 100px;
+        cursor:pointer;
+    }
+    #img_left{
+        margin-left: 20px;
+        width: 70%;
+        height: 80%;
+        cursor:pointer;
+        opacity:0.5;
+    }
+    #img_left:hover{
+        transform: scale(1.4);
+        opacity:1;
+    }
+    #img_right{
+        margin-left: 20px;
+        width: 70%;
+        height: 80%;
+        cursor:pointer;
+        opacity:0.5;
+    }
+    #img_right:hover{
+        transform: scale(1.4);
+        opacity:1;
+    }
+    .imagesdiv{
+        height:100%;
+        width: 20%;
+        text-align:center;
+        display:table-cell;
+        vertical-align:middle;
+    }
+    #image_01 img{
+        opacity:0.5;
+        width: 60%;
+        height: 60%;
+    }
+    #image_02 img{
+        opacity:0.5;
+        width: 80%;
+        height: 80%;
+    }
+    #image_04 img{
+        opacity:0.5;
+        width: 80%;
+        height: 80%;
+    }
+    #image_05 img{
+        opacity:0.5;
+        width: 60%;
+        height: 60%;
+    }
+    #image_03 img{
+        width: 100%;
+        height: 100%;
+        opacity:1;
+    }
+    .imgs{
+        cursor:pointer
+    }
+}
+@media screen and (max-width: 499px) {
+    body{
+
+    }
+    div{
+        display: none;
+    }
+    #error{
+        display: inline;
+        text-align: center;
+        font-size: 50px;
+    }
+}
+
+
+

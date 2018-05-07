@@ -4,6 +4,7 @@ package com.competition.model;
  * Created by 14553 on 2018/4/29.
  */
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "animals")
@@ -25,15 +26,19 @@ public class Animals {
     @Column(name = "connect")
     private String connect;
 
+    @Column(name = "time")
+    private Timestamp time;
+
     public Animals() {
 
     }
 
-    public Animals(String imgName, String city, String isDog, String connect) {
+    public Animals(String imgName, String city, String isDog, String connect,Timestamp time) {
         this.imgName = imgName;
         this.city = city;
         this.isDog = isDog;
         this.connect = connect;
+        this.time = time;
     }
 
     public Integer getId() {
@@ -74,5 +79,13 @@ public class Animals {
 
     public void setConnect(String connect) {
         this.connect = connect;
+    }
+
+    public Timestamp getTime() {
+        return time;
+    }
+
+    public void setTime(Timestamp time) {
+        this.time = time;
     }
 }

@@ -11,4 +11,7 @@ import org.springframework.stereotype.Repository;
 @Repository("animalsDao")
 public interface AnimalsRepository extends CrudRepository<Animals, Integer> {
     Animals findByImgName(String img_name);
+
+    @Override
+    void deleteById(Integer integer);
 }

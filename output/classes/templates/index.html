@@ -2,42 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>D&C救护站</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
 </head>
-<link rel="stylesheet"  th:href="@{/css/test.css}">
-<img>
-<p th:text="'一共有'+${nums}+'个宠物亟待领取'"/>
-<!--<img id="image" th:src="${infoImg0}"/>
+<body>
+<div id="error">请使用电脑打开本网页</div>
+<div id="top"></div>
+<div id="content">
+    <div id="content_left">
+        <div id="content_left_main">
+            <img th:src="@{/image/left.png}" id="img_left" onclick="moveleft()">
+        </div>
+    </div>
+    <div id="content_right">
+        <div id="content_right_son1" class="content_right_son">
+            <div id="content_right_son1_left">
+                <p>所在城市：</p>
+            </div>
+            <div id="content_right_son1_mid">
+                <label>
+                    <select id="select">
+                        <option value="1">武汉</option>
+                        <option value="2">上海</option>
+                        <option value="3">北京</option>
+                        <option value="4">广州</option>
+                    </select>
+                </label>
+            </div>
+            <div id="content_right_son1_right">
+                <div id="btn_get" class="buttons">
+                    <p>查询</p>
+                </div>
+                <div id="btn_start" class="buttons">
 
-<img id="image2" th:src="${infoImg1}" style="display:none"/>-->
+                    <a href="/finddog"><p>发现流浪猫/狗</p></a>
 
-<div id="123" style="width: 200px;height: 300px;position:relative;">
-    <img id="image" style="width: 200px;height: 300px;" th:src="${infoImg1}"/>
-    <div style="width: 200px;height: 300px;position: absolute;z-index:2;top: 0; left: 0;">
-
-
+                </div>
+            </div>
+        </div>
+        <div id="content_right_son2" class="content_right_son">
+            <div id="image_01" class="imagesdiv">
+                <img id="img1" class="imgs" th:src="'../images/'+${infoImg0}" onclick="move_click(0)"/>
+            </div>
+            <div  id="image_02"  class="imagesdiv">
+                <img id="img2" class="imgs" th:src="'../images/'+${infoImg1}" onclick="move_click(1)"/>
+            </div>
+            <div id="image_03" class="imagesdiv">
+                <a id="upload" onmouseover="putURL()" href=""><img id="img3" class="imgs" th:src="'../images/'+${infoImg2}"/></a>
+            </div>
+            <div id="image_04" class="imagesdiv">
+                <img id="img4" class="imgs" th:src="'../images/'+${infoImg3}" onclick="move_click(3)"/>
+            </div>
+            <div id="image_05" class="imagesdiv">
+                <img id="img5" class="imgs" th:src="'../images/'+${infoImg4}" onclick="move_click(4)"/>
+            </div>
+        </div>
+        <div id="content_right_son3" class="content_right_son">
+        </div>
+    </div>
+    <div id="content_right_right">
+        <div id="content_right_right_main">
+            <img th:src="@{/image/right.png}" id="img_right" onclick="moveright()">
+        </div>
     </div>
 </div>
-<button style="width: 100px;height: 50px" name="456" id="btn">切换图片</button>
-</body>
-<script>
-    var num = 1;
-    document.getElementById("btn").onclick=function () {
-        if(num==1){
-            document.getElementById("image2").style.display="";
-            document.getElementById("image").style.display="none";
-            num = 0;
-        }
-        else{
-            document.getElementById("image").style.display="";
-            document.getElementById("image2").style.display="none";
-            num=1;
-        }
-        /*}else{
-            document.getElementById("image1").style.display="";
-            document.getElementById("image2").style.display="none"
-        }*/
-    }
+<div id="bottem"></div>
 
-</script>
+
+
+
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+<!--引入-->
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+
+<!--<script type="text/javascript" src="js/bar.js"></script>-->
+<script type="text/javascript" th:src="@{/js/map.js}"></script>
+</body>
 </html>

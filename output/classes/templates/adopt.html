@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>领养它</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link th:href="@{/resources/css/jquery-ui-themes.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{/resources/css/axure_rp_page.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{/data/styles.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{/files/page3/styles.css}" type="text/css" rel="stylesheet"/>
+    <script th:src="@{/resources/scripts/jquery-1.7.1.min.js}"></script>
+    <script th:src="@{/resources/scripts/jquery-ui-1.8.10.custom.min.js}"></script>
+    <script th:src="@{/resources/scripts/prototypePre.js}"></script>
+    <script th:src="@{/data/document.js}"></script>
+    <script th:src="@{/resources/scripts/prototypePost.js}"></script>
+    <script th:src="@{/files/page3/data.js}"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (图片) -->
+      <div id="u96" class="ax_default image">
+        <img id="u96_img" class="img " th:src="@{/adopt_images/page3/u96.jpg}"/>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u97" class="ax_default image">
+        <img id="u97_img" class="img " th:src="'../images/'+${resultImg}"/>
+
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u98" class="ax_default box_1">
+        <div id="u98_div" class=""></div>
+        <div id="u98_text" class="text ">
+          <p><span>动&nbsp;&nbsp; 物&nbsp;&nbsp; 信&nbsp;&nbsp; 息</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u99" class="ax_default box_2">
+        <div id="u99_div" class=""></div>
+        <div id="u99_text" class="text ">
+          <p th:text="'品种：'+${resultKind}"></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u100" class="ax_default box_2">
+        <div id="u100_div" class=""></div>
+        <div id="u100_text" class="text">
+          <p th:text="'地区：'+${resultCity}"></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u101" class="ax_default box_1">
+        <div id="u101_div" class=""></div>
+        <div id="u101_text" class="text ">
+          <p><span>请您填写完整的领养人信息</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u102" class="ax_default box_1">
+        <div id="u102_div" class=""></div>
+        <div id="u102_text" class="text ">
+          <p><span>姓名：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u103" class="ax_default box_1">
+        <div id="u103_div" class=""></div>
+        <div id="u103_text" class="text ">
+          <p><span>联系方式：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u104" class="ax_default box_1">
+        <div id="u104_div" class=""></div>
+        <div id="u104_text" class="text ">
+          <p><span>家庭住址：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u105" class="ax_default box_1">
+        <div id="u105_div" class=""></div>
+        <div id="u105_text" class="text ">
+          <p><span>性别：</span></p>
+        </div>
+      </div>
+
+      <form id="form" action="/adoptInfo" method="post">
+      <!-- radio1 (单选按钮) -->
+      <div id="u106" class="ax_default radio_button" data-label="radio1">
+        <label for="u106_input" style="position: absolute; left: 0px;">
+          <div id="u106_text" class="text">
+            <p><span>男</span></p>
+          </div>
+        </label>
+        <input id="u106_input" type="radio" value="男" name="gender"/>
+      </div>
+
+      <!-- radio2 (单选按钮) -->
+      <div id="u107" class="ax_default radio_button" data-label="radio2">
+          <div id="u107_text" class="text">
+            <p><span>女</span></p>
+          </div>
+        </label>
+        <input id="u107_input" type="radio" value="女" name="gender"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u108" class="ax_default box_1">
+        <div id="u108_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u109" class="ax_default text_field">
+        <input id="u109_input" type="text" name = "name" value=""/>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u110" class="ax_default text_field">
+        <input id="u110_input" type="text" name = "pnumber" value=""/>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u111" class="ax_default text_field">
+        <input id="u111_input" type="text" name = "address" value=""/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u112" class="ax_default box_1">
+        <div id="u112_div" class=""></div>
+        <div id="u112_text" class="text ">
+          <p><span>我们将会在您填完信息后尽快联系您，祝您能和小猫/狗一同享受快乐的时光！</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+        <div id="u113" class="">
+          <div id="u113_text" class="text ">
+            <input type="submit" value="提&nbsp; &nbsp;&nbsp;交" class="button" onmouseover="addAction()">
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+<script type="text/javascript">
+
+  function addAction() {
+
+      var arr = document.getElementById("u97_img").src.split("/");
+      var url="/adoptInfo/"+arr[arr.length-1];
+     // alert("arr:"+arr);
+     // alert("url:"+url);
+      document.getElementById("form").action=url;
+      //alert();
+  }
+
+</script>
+</html>

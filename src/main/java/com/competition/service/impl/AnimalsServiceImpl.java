@@ -7,6 +7,7 @@ import com.competition.service.AnimalsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -17,12 +18,13 @@ public class AnimalsServiceImpl implements AnimalsService {
     @Autowired
     private AnimalsRepository animalsDao;
 
-    public Animals addAnimals(String img_name, String city, String is_dog, String connect) {
+    public Animals addAnimals(String img_name, String city, String is_dog, String connect,Timestamp time) {
         Animals animals = new Animals();
         animals.setCity(city);
         animals.setConnect(connect);
         animals.setIsDog(is_dog);
         animals.setImgName(img_name);
+        animals.setTime(time);
         return animalsDao.save(animals);
     }
     public Animals findByImgName(String img_name){
@@ -33,5 +35,8 @@ public class AnimalsServiceImpl implements AnimalsService {
     }
     public List<Animals> getAllAnimals(){
         return (List<Animals>)(animalsDao.findAll());
+    }
+    public void deleteById(Integer id){
+        animalsDao.deleteById(id);
     }
 }

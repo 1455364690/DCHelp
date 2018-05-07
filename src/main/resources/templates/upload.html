@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传成功</title>
+</head>
+<body>
+<h1>上传成功</h1><br>
+<h2 id="time">3秒后跳转至主页</h2>
+<h2><a href="/">您可以点击此链接直接跳转主页</a></h2>
+</body>
+<script type="text/javascript">
+    var time = 3;
+    window.onload=function (){
+
+        setInterval("myFunction()",1000);
+
+    }
+    function myFunction()
+    {
+        document.getElementById("time").innerHTML=time+"秒后跳转至主页";
+        if(time==0){
+            window.location.href="/";
+        }
+        time--;
+    }
+
+</script>
+</html>
